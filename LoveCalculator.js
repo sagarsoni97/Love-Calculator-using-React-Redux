@@ -49,13 +49,20 @@ const LoveCalculator = () => {
 
                 { 
 
-                loading ? ( <div>Loading</div> ) : 
+                loading ? ( <div> 
+                    <Loader
+                    type="ThreeDots"
+                    color="red"
+                    height={100}
+                    width={100}
+                    timeout={3000} //3 secs
+                  /></div> ) : 
 
                 error ? ( <div>Error</div> ) :
                
                 value.length == 0  ? 
             
-                 (<div>no data</div>) :  
+                 (<div></div>) :  
                  
                  (
                     <div>
@@ -72,7 +79,7 @@ const LoveCalculator = () => {
 
             </div>
         </div>
-    ) 
+     ) 
 }
 
 export default LoveCalculator
